@@ -23,6 +23,87 @@
     <!-- Custom styles for this template -->
     <link href="publico/css/agency.min.css" rel="stylesheet">
 
+
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  background: rgb(7,59,76);
+}
+
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: .65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("publico/img/header-bg.jpg");
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  z-index: 4;
+}
+
+.caption span.border { 
+  background-color: #111; /* color del fondo de las letras del titulo */
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  opacity: 0.8;
+  }
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+#services {
+  background-color: white;
+}
+#portfolio {
+  background-color: lightgrey;
+}
+#team {
+  background-color: grey;
+}
+
+.team-member img {
+  border-color: black;
+  border-width: 2px;
+}
+.icono{
+  width: 50px;
+  height: 50px;
+}
+.nav-login-registro{
+  font-size: 1.4em;
+}
+.portfolio-item img {
+  width: 400px;
+  height: 300px;
+} 
+.modal-body h2 {
+  font-family: 'Kaushan Script';
+}
+</style>
+
+
   </head>
 
   <body id="page-top">
@@ -38,82 +119,86 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Servicios</a>
+             <a class="nav-link js-scroll-trigger" href="#services">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Clientes</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Ranking</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Perfiles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
             </li>
+
+            <li class="nav-item nav-login-registro">
+              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+            </li>
+            <li class="nav-item nav-login-registro">
+              <a class="nav-link js-scroll-trigger" href="/register">Registrase</a>
+            </li>
+            
+
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-heading text-uppercase">PaNPaS</div>
-          <div class="intro-lead-in">¿Tienes una panadería y crees que su gestión es un trabajo pesado? 
-            Te invitamos a probar nuestra APP, simplifica, organiza y monitoriza trabajo y recursos.</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-        </div>
-      </div>
-    </header>
+
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">PaNPaS</span><br><br>
+    <span class="border">Gestiona tu panadería con facilidad</span><br><br>
+    <span class="border">Conserva y comparte tus recetas</span>
+  </div>
+</div>
 
     <!-- Services -->
     <section id="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Servicios</h2>
+            <h3 class="section-subheading text-muted">Descubre qué podemos ofrecerte</h3>
           </div>
         </div>
         <div class="row text-center">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-cookie fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading">Gestiona tu Panadería</h4>
+            <p class="text-muted">Facilita la gestión de tu negocio.<br>Organiza bien tu almacén</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading">Comparte Recetas</h4>
+            <p class="text-muted">Crea recetas públicas para que las visualicen otros usuarios o privadas para tu uso personal. </p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+              <i class="fas fa-star fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading">Vota</h4>
+            <p class="text-muted">Valora las recetas de otros usuarios.<br>Las 3 más votadas tendrán un premio.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <section id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Ranking</h2>
+            <h3 class="section-subheading text-muted">Visualiza las recetas más destacadas</h3>
           </div>
         </div>
         <div class="row">
@@ -124,13 +209,17 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/bollosSuizos.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Receta1</h4>
+              <p class="text-muted">usuario3</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(250, 220, 0)"></i> 5 </h4>
             </div>
           </div>
+
+
+
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
               <div class="portfolio-hover">
@@ -138,11 +227,12 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/madalenas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Receta2</h4>
+              <p class="text-muted">usuario1</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -152,11 +242,12 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/pan.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Receta3</h4>
+              <p class="text-muted">usuario3</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -166,11 +257,12 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/panDeSemillas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Receta4</h4>
+              <p class="text-muted">usuario1</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -180,11 +272,12 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/panecillos.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Receta5</h4>
+              <p class="text-muted">usuario2</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -194,216 +287,84 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="publico/img/recetas/pastas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Receta6</h4>
+              <p class="text-muted">usuario2</p>
+              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>December 2012</h4>
-                    <h4 class="subheading">Transition to Full Service</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>July 2014</h4>
-                    <h4 class="subheading">Phase Two Expansion</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>Be Part
-                    <br>Of Our
-                    <br>Story!</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Team -->
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Nuestros Clientes</h2>
+            <h3 class="section-subheading text-muted">Empresas que mejoraron su gestión gracias al manejo de nuestra App</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
+              <a href="#"><img class="mx-auto rounded-circle" src="publico/img/ogitxerri.png" alt=""></a>
+              <h4>Ogi Txerri</h4>
+              <p class="text-muted">Tu pan marrano.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Marketer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
+               <a href="#"><img class="mx-auto rounded-circle" src="publico/img/bigopan.png" alt=""></a>
+              <h4>Bigopan</h4>
+              <p class="text-muted">Descripcion</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
+               <a href="#"><img class="mx-auto rounded-circle" src="publico/img/peterpan.png" alt=""></a>
+              <h4>PeterPan</h4>
+              <p class="text-muted">Panes de Cuento</p>
+
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+
+        <div class="col-sm-4">
+            <div class="team-member">
+               <a href="#"><img class="mx-auto rounded-circle" src="publico/img/ruso.png" alt=""></a>
+              <h4>Ruso</h4>
+              <p class="text-muted"></p>
+            </div>
           </div>
+
+          <div class="col-sm-4">
+            <div class="team-member">
+               <a href="#"><img class="mx-auto rounded-circle" src="publico/img/pompan.png" alt=""></a>
+              <h4>PomPan</h4>
+              <p class="text-muted"></p>
+            </div>
+          </div>
+
+           <div class="col-sm-4">
+            <div class="team-member">
+               <a href="#"><img class="mx-auto rounded-circle" src="publico/img/troyano.png" alt=""></a>
+              <h4>Troyano</h4>
+              <p class="text-muted"></p>
+            </div>
+          </div>
+
         </div>
+
+
       </div>
     </section>
 
-    <!-- Clients -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Contact -->
     <section id="contact">
@@ -502,9 +463,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                  <h2 class="text-uppercase">Bollos Suizos</h2>
+                  <p class="item-intro text-muted">Usuario3</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/bollosSuizos.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -536,9 +497,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                  <h2 class="text-uppercase">Madalenas</h2>
+                  <p class="item-intro text-muted">Usuario1</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/madalenas.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -570,9 +531,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                  <h2 class="text-uppercase">Pan</h2>
+                  <p class="item-intro text-muted">Usuario3</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/pan.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -604,9 +565,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                  <h2 class="text-uppercase">Pan De Semillas</h2>
+                  <p class="item-intro text-muted">Usuario1</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/panDeSemillas.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -638,9 +599,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
+                  <h2 class="text-uppercase">Panecillos</h2>
+                  <p class="item-intro text-muted">Usuario2</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/panecillos.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -672,9 +633,9 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
+                  <h2 class="text-uppercase">Pastas</h2>
+                  <p class="item-intro text-muted">2</p>
+                  <img class="img-fluid d-block mx-auto" src="publico/img/recetas/pastas.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
