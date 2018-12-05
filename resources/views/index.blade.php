@@ -30,7 +30,8 @@ body, html {
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
-  background: rgb(7,59,76);
+  background-color: #364a4c;
+  
 }
 
 
@@ -53,7 +54,7 @@ body, html {
   top: 35%;
   width: 100%;
   text-align: center;
-  color: #000;
+  color: white;
   z-index: 4;
 }
 
@@ -77,10 +78,10 @@ h3 {
   background-color: white;
 }
 #portfolio {
-  background-color: lightgrey;
+  background-color: white;
 }
 #team {
-  background-color: grey;
+  background-color: white;
 }
 
 .team-member img {
@@ -101,6 +102,34 @@ h3 {
 .modal-body h2 {
   font-family: 'Kaushan Script';
 }
+.titulo {
+  font-size: 5em;
+  font-weight: bolder;
+  text-shadow: 5px 10px 0px black;
+
+}
+.subtitulo {
+  font-size: 2.5em;
+  font-weight: bolder;
+  text-shadow: 5px 10px 0px black;
+
+}
+.fa-script{
+  font-family: 'Kaushan Script';
+}
+
+.loginRegistroModal{
+  width: 20%; 
+  height: 50%; 
+  margin: auto; 
+  padding: 10px;
+
+  min-width: 400px;
+  max-width: 100%;
+
+}
+
+
 </style>
 
 
@@ -130,12 +159,11 @@ h3 {
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
             </li>
-
             <li class="nav-item nav-login-registro">
-              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+              <a class="nav-link portfolio-link" data-toggle="modal" href="#loginModal">Login</a>
             </li>
             <li class="nav-item nav-login-registro">
-              <a class="nav-link js-scroll-trigger" href="/register">Registrase</a>
+              <a class="nav-link portfolio-link" data-toggle="modal" href="#registroModal">Registro</a>
             </li>
             
 
@@ -148,9 +176,9 @@ h3 {
 
 <div class="bgimg-1">
   <div class="caption">
-    <span class="border">PaNPaS</span><br><br>
-    <span class="border">Gestiona tu panadería con facilidad</span><br><br>
-    <span class="border">Conserva y comparte tus recetas</span>
+    <span class="titulo fa-script">PaNPaS</span><br><br>
+    <span class="subtitulo fa-script">Gestiona tu panadería con facilidad</span><br><br>
+    <span class="subtitulo fa-script">Conserva y comparte tus recetas</span>
   </div>
 </div>
 
@@ -160,45 +188,53 @@ h3 {
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Servicios</h2>
-            <h3 class="section-subheading text-muted">Descubre qué podemos ofrecerte</h3>
+            <h3 class="section-subheading text-muted" style="font-family: 'Kaushan script'">Descubre qué podemos ofrecerte</h3>
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-cookie fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Gestiona tu Panadería</h4>
+            <h4 class="service-heading fa-script">Gestiona tu Panadería</h4>
             <p class="text-muted">Facilita la gestión de tu negocio.<br>Organiza bien tu almacén</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Comparte Recetas</h4>
+            <h4 class="service-heading fa-script">Comparte Recetas</h4>
             <p class="text-muted">Crea recetas públicas para que las visualicen otros usuarios o privadas para tu uso personal. </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-star fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="service-heading">Vota</h4>
+            <h4 class="service-heading fa-script">Vota</h4>
             <p class="text-muted">Valora las recetas de otros usuarios.<br>Las 3 más votadas tendrán un premio.</p>
+          </div>
+           <div class="col-md-3">
+            <span class="fa-award fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fab fa-angellist fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading fa-script">Ranking</h4>
+            <p class="text-muted"> Con las Votaciones habrá un ranking<br>¿Conseguirás llegar al primer puesto?</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Portfolio Grid -->
-    <section id="portfolio">
+    <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Ranking</h2>
-            <h3 class="section-subheading text-muted">Visualiza las recetas más destacadas</h3>
+            <h3 class="section-subheading text-muted" style="font-family: 'Kaushan script'">Visualiza las recetas más destacadas</h3>
           </div>
         </div>
         <div class="row">
@@ -212,9 +248,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/bollosSuizos.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta1</h4>
+              <h4 style=" font-family:'kaushan script'">Receta1</h4>
               <p class="text-muted">usuario3</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(250, 220, 0)"></i> 5 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(250, 220, 0)"></i> 5 </h4>
             </div>
           </div>
 
@@ -230,9 +266,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/madalenas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta2</h4>
+              <h4 style=" font-family:'kaushan script'">Receta2</h4>
               <p class="text-muted">usuario1</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -245,9 +281,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/pan.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta3</h4>
+              <h4 style=" font-family:'kaushan script'">Receta3</h4>
               <p class="text-muted">usuario3</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(147, 147, 140)"></i> 3 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -260,9 +296,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/panDeSemillas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta4</h4>
+              <h4 style=" font-family:'kaushan script'">Receta4</h4>
               <p class="text-muted">usuario1</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -275,9 +311,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/panecillos.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta5</h4>
+              <h4 style=" font-family:'kaushan script'">Receta5</h4>
               <p class="text-muted">usuario2</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -290,9 +326,9 @@ h3 {
               <img class="img-fluid" src="publico/img/recetas/pastas.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Receta6</h4>
+              <h4 style=" font-family:'kaushan script'">Receta6</h4>
               <p class="text-muted">usuario2</p>
-              <h4><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
+              <h4 style="font-family:'kaushan script'"><i class="fas fa-star fa-lg" style="color: rgb(168, 122, 67)"></i> 1 </h4>
             </div>
           </div>
         </div>
@@ -302,12 +338,12 @@ h3 {
     
 
     <!-- Team -->
-    <section class="bg-light" id="team">
+    <section id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Nuestros Clientes</h2>
-            <h3 class="section-subheading text-muted">Empresas que mejoraron su gestión gracias al manejo de nuestra App</h3>
+            <h3 class="section-subheading text-muted"><span class="fa-script">Empresas que mejoraron su gestión gracias al manejo de nuestra App</span></h3>
           </div>
         </div>
         <div class="row">
@@ -372,7 +408,7 @@ h3 {
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">¿Te interesa?</h2>
-            <h3 class="section-subheading text-muted">Contacta con nosotros para resolver todas tus dudas.</h3>
+            <h3 class="section-subheading text-muted"><span class="fa-script">Contacta con nosotros para resolver todas tus dudas.</span></h3>
           </div>
         </div>
         <div class="row">
@@ -468,13 +504,13 @@ h3 {
                   <img class="img-fluid d-block mx-auto" src="publico/img/recetas/bollosSuizos.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li>Fecha de Creación:</li>
+                    <li>Categoría:</li>
+                    <li>Votos:</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -502,13 +538,13 @@ h3 {
                   <img class="img-fluid d-block mx-auto" src="publico/img/recetas/madalenas.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
+                    <li>Fecha de Creación:</li>
+                    <li>Categoría:</li>
+                    <li>Votos:</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -536,13 +572,13 @@ h3 {
                   <img class="img-fluid d-block mx-auto" src="publico/img/recetas/pan.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
+                    <li>Fecha de Creación:</li>
+                    <li>Categoría:</li>
+                    <li>Votos:</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -570,13 +606,13 @@ h3 {
                   <img class="img-fluid d-block mx-auto" src="publico/img/recetas/panDeSemillas.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
+                    <li>Fecha de Creación:</li>
+                    <li>Categoría:</li>
+                    <li>Votos:</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -604,13 +640,13 @@ h3 {
                   <img class="img-fluid d-block mx-auto" src="publico/img/recetas/panecillos.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
+                    <li>Fecha de Creación:</li>
+                    <li>Categoría:</li>
+                    <li>Votos:</li>
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -644,7 +680,7 @@ h3 {
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Cerrar</button>
                 </div>
               </div>
             </div>
@@ -652,6 +688,108 @@ h3 {
         </div>
       </div>
     </div>
+
+
+    <!-- Login / Registro Modals -->
+
+    <!-- Login -->
+      <div class="portfolio-modal modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content loginRegistroModal">
+            <div class="text-center" style="padding:50px">
+                                <div class="logo">login</div>
+                                <!-- Main Form -->
+                                <div class="login-form-1">
+                                  <form id="login-form" class="text-left" method="get" action="#">
+                                    <div class="login-form-main-message"></div>
+                                    <div class="main-login-form">
+                                      <div class="login-group">
+                                        <div class="form-group">
+                                          <label for="lg_username" class="sr-only">Username</label>
+                                          <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="lg_password" class="sr-only">Password</label>
+                                          <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                                        </div>
+                                        <div class="form-group login-group-checkbox">
+                                          <input type="checkbox" id="lg_remember" name="lg_remember">
+                                          <label for="lg_remember">remember</label>
+                                        </div>
+                                      </div>
+                                      <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                                    </div>
+                                    <div class="etc-login-form">
+                                      <p>forgot your password? <a href="#">click here</a></p>
+                                      <p>new user? <a href="#">create new account</a></p>
+                                    </div>
+                                  </form>
+                                </div>
+                                <!-- end:Main Form -->
+                              </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Registro -->
+      <div class="portfolio-modal modal fade" id="registroModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content loginRegistroModal">
+                                     <div class="text-center" style="padding:50px">
+                            <div class="logo">register</div>
+                            <!-- Main Form -->
+                            <div class="login-form-1">
+                              <form id="register-form" class="text-left" method="get" action="#">
+                                <div class="login-form-main-message"></div>
+                                <div class="main-login-form">
+                                  <div class="login-group">
+                                    <div class="form-group">
+                                      <label for="reg_username" class="sr-only">Email address</label>
+                                      <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="reg_password" class="sr-only">Password</label>
+                                      <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+                                      <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                      <label for="reg_email" class="sr-only">Email</label>
+                                      <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="reg_fullname" class="sr-only">Full Name</label>
+                                      <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+                                    </div>
+                                    
+                                    <div class="form-group login-group-checkbox">
+                                      <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+                                      <label for="male">male</label>
+                                      
+                                      <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+                                      <label for="female">female</label>
+                                    </div>
+                                    
+                                    <div class="form-group login-group-checkbox">
+                                      <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+                                      <label for="reg_agree">i agree with <a href="#">terms</a></label>
+                                    </div>
+                                  </div>
+                                  <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                                </div>
+                                <div class="etc-login-form">
+                                  <p>already have an account? <a href="#">login here</a></p>
+                                </div>
+                              </form>
+                            </div>
+                            <!-- end:Main Form -->
+                          </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="publico/vendor/jquery/jquery.min.js"></script>
@@ -662,7 +800,7 @@ h3 {
 
     <!-- Contact form JavaScript -->
     <script src="publico/js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="publico/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="publico/js/agency.min.js"></script>
