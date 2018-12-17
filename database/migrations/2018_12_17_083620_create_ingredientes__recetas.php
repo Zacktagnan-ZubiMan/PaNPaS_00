@@ -13,7 +13,8 @@ class CreateIngredientesRecetas extends Migration
      */
     public function up()
     {
-        Schema::create('ingredientes_recetas', function (Blueprint $table) {
+        Schema::create('ingrediente_receta', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('ingrediente_id')->unsigned();
             $table->integer('receta_id')->unsigned();
             $table->timestamps();

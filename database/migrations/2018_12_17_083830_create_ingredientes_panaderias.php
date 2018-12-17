@@ -13,7 +13,8 @@ class CreateIngredientesPanaderias extends Migration
      */
     public function up()
     {
-        Schema::create('ingredientes_panaderias', function (Blueprint $table) {
+        Schema::create('ingrediente_panaderia', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('cantidad');
             $table->integer('panaderia_id')->unsigned();
             $table->integer('ingrediente_id')->unsigned();

@@ -16,7 +16,7 @@ class CreatePanaderiasTable extends Migration
         Schema::create('panaderias', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });

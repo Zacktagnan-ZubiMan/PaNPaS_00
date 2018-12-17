@@ -10,6 +10,9 @@ class Perfil extends Model
     	protected $primarykey = 'id';
 
 
+    public function users() {
+    	return $this->hasMany('App\User');
+    }
 
 
 }

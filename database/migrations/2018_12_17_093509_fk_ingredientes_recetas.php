@@ -13,7 +13,7 @@ class FkIngredientesRecetas extends Migration
      */
     public function up()
     {
-        Schema::table('ingredientes_recetas', function (Blueprint $table) {
+        Schema::table('ingrediente_receta', function (Blueprint $table) {
             $table->foreign('ingrediente_id')->references('id')->on('ingredientes');
             $table->foreign('receta_id')->references('id')->on('recetas');
         });
