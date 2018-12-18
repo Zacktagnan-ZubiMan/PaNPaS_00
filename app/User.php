@@ -30,7 +30,7 @@ class User extends Authenticatable
 
 
     public function perfil(){
-        return $this->hasOne('App\User');
+        return $this->belongsTo('App\Perfil');
     }
 
     public function recetas(){
