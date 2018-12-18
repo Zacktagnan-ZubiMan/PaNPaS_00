@@ -413,21 +413,22 @@ h3 {
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <form action="/enviarDatosContacto" method="post" novalidate="novalidate">
+              @csrf
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Nombre *" required="required" data-validation-required-message="Please enter your name.">
+                    <input class="form-control" name="name" id="name" type="text" placeholder="Nombre *" required="required" data-validation-required-message="Please enter your name.">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Correo Electrónico *" required="required" data-validation-required-message="Please enter your email address.">
+                    <input class="form-control" name="email" id="email" type="email" placeholder="Correo Electrónico *" required="required" data-validation-required-message="Please enter your email address.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Escribe tus dudas *" required="required" data-validation-required-message="Please enter a message." style="height: 158px;"></textarea>
+                    <textarea class="form-control" name="message" id="message" placeholder="Escribe tus dudas *" required="required" data-validation-required-message="Please enter a message." style="height: 158px;"></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
