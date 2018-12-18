@@ -14,8 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/admin', function () {
-    return view('admin.index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin2', function () {
+    return view('admin.indexTEMP');
 });
 
 Auth::routes();
@@ -23,3 +24,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/enviarDatosContacto', 'ContactoController@guardarDatos');
+
