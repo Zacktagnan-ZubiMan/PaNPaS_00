@@ -31,7 +31,7 @@ body, html {
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
   background-color: #364a4c;
-  
+
 }
 
 
@@ -58,7 +58,7 @@ body, html {
   z-index: 4;
 }
 
-.caption span.border { 
+.caption span.border {
   background-color: #111; /* color del fondo de las letras del titulo */
   color: #fff;
   padding: 18px;
@@ -98,7 +98,7 @@ h3 {
 .portfolio-item img {
   width: 400px;
   height: 300px;
-} 
+}
 .modal-body h2 {
   font-family: 'Kaushan Script';
 }
@@ -119,9 +119,9 @@ h3 {
 }
 
 .loginRegistroModal{
-  width: 20%; 
-  height: 50%; 
-  margin: auto; 
+  width: 20%;
+  height: 50%;
+  margin: auto;
   padding: 10px;
 
   min-width: 400px;
@@ -163,9 +163,9 @@ h3 {
               <a class="nav-link portfolio-link" data-toggle="modal" href="#loginModal">Login</a>
             </li>
             <li class="nav-item nav-login-registro">
-              <a class="nav-link portfolio-link" data-toggle="modal" href="#registroModal">Registro</a>
+              <a class="nav-link portfolio-link" data-toggle="modal" href="#registerModal">Registro</a>
             </li>
-            
+
 
           </ul>
         </div>
@@ -335,7 +335,7 @@ h3 {
       </div>
     </section>
 
-    
+
 
     <!-- Team -->
     <section id="team">
@@ -400,7 +400,7 @@ h3 {
       </div>
     </section>
 
-    
+
 
     <!-- Contact -->
     <section id="contact">
@@ -693,6 +693,7 @@ h3 {
     <!-- Login / Registro Modals -->
 
     <!-- Login -->
+    {{--
       <div class="portfolio-modal modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content loginRegistroModal">
@@ -729,7 +730,11 @@ h3 {
                               </div>
           </div>
         </div>
-      </div>
+      </div>--}}
+
+            {{-- Ventana(s) modal(es) --}}
+            @include('auth.modals.login_modal')
+            @include('auth.modals.register_modal')
 
     <!-- Registro -->
       <div class="portfolio-modal modal fade" id="registroModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -755,7 +760,7 @@ h3 {
                                       <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
                                       <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                       <label for="reg_email" class="sr-only">Email</label>
                                       <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
@@ -764,15 +769,15 @@ h3 {
                                       <label for="reg_fullname" class="sr-only">Full Name</label>
                                       <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
                                     </div>
-                                    
+
                                     <div class="form-group login-group-checkbox">
                                       <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
                                       <label for="male">male</label>
-                                      
+
                                       <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
                                       <label for="female">female</label>
                                     </div>
-                                    
+
                                     <div class="form-group login-group-checkbox">
                                       <input type="checkbox" class="" id="reg_agree" name="reg_agree">
                                       <label for="reg_agree">i agree with <a href="#">terms</a></label>
