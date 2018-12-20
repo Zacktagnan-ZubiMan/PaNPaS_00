@@ -1,5 +1,3 @@
-
-
 function mostrarDatos(dato){
 	var div = document.getElementById(mostrarEstadisticas);
 

@@ -25,3 +25,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/enviarDatosContacto', 'ContactoController@guardarDatos');
 
+Route::post('/admin/editarUsuario', 'UserController@editarUsuario');
+Route::post('/admin/borrarUsuario', 'UserController@borrarUsuario');
+
+
+
+
+
+// [API]recoger datos 
+
+Route::get ('/api/usuarios', 'ApiController@getUsuarios');
+Route::get ('/api/perfiles', 'ApiController@getPerfiles');

@@ -517,29 +517,36 @@
 
 
             <!--Inicio de muestra de datos-->
-                <div id="mostrarEstadisticas" style="margin: auto; width: 100%;">
+                <div id="crud" style="margin: auto; width: 100%;">
                     <table id="tablaMuestraDatos">
                     <tr>
+                        <th>ID</th>
                         <th>Nick</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
                         <th>T.Cuenta</th>
                     </tr>
-                    @foreach ($usuarios as $usuario)
-                        <tr>
-                            <td>{{$usuario->nick}}</td>
-                            <td>{{$usuario->nombre}}</td>
-                            <td>{{$usuario->apellido}}</td>
-                            <td>{{$usuario->email}}</td>
-                            <td>{{$usuario->perfil->nombre}}</td>
+                        <tr v-for="usuario in usuarios">
+                            <td v-text="usuario.id"></td>
+                            <td v-text="usuario.nick"></td>
+                            <td v-text="usuario.nombre"></td>
+                            <td v-text="usuario.apellido"></td>
+                            <td v-text="usuario.email"></td>
+                            <td v-if="usuario.perfil_id == 1">Administrador</td>
+                            <td v-if="usuario.perfil_id == 2">Usuario</td>
+
                             <td>
-                                <button class="">Borrar</button>
-                                <button class="">Editar</button>
+                                    <a href="#" class="btn btn-danger float-right button_opcionBorrar" data-toggle="modal" data-target="#borrarModal" v-on:click="id = usuario.id">Borrar</a>
+                                    <a href="#" class="btn btn-primary float-right button_opcionEditar" data-toggle="modal" data-target="#editarModal" v-on:click="id = usuario.id, seleccionarUsuario()">Editar</a>
                             </td>
                         </tr>
-                    @endforeach
+
                     </table>
+
+                        {{-- Ventana(s) modal(es) --}}
+                        @include('admin.layouts.borrar')
+                        @include('admin.layouts.editar')                    
 
                 </div>
             <!--Fin de muestra de datos-->
@@ -600,7 +607,11 @@
     <script src="interno/dist/js/sb-admin-2.js"></script>
 
     <!-- Scripts PaNPaS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="interno/js/estadisticas.js"></script>
+    <script src="interno/js/modalVue.js"></script>
+   
+
 
 </body>
 
