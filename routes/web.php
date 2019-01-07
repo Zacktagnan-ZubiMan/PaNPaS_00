@@ -33,6 +33,14 @@ Route::get ('/receta', 'RecetaController@mostrar');
 
 
 
+
+
+//Rutas de la parte pública
+Route::get ('/user/perfil/{id}', 'UserPerfilController@mostrarPerfil'); //mostrar perfil del usuario con información pública
+
+
+
+
 // [API]recoger datos 
 
 Route::get ('/api/usuarios', 'ApiController@getUsuarios'); 	//json de todos los usuarios registrados

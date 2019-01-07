@@ -16,4 +16,8 @@ class Receta extends Model
     public function ingredientes(){
     	return $this->belongsToMany('App\Ingrediente');
     }
+
+    public function comentarios(){
+    	return $this->hasMany('App\Comentario');
+    }
 }

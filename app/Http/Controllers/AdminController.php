@@ -10,6 +10,7 @@ use App\Receta;
 use App\Ingrediente;
 use App\Panaderia;
 
+
 class AdminController extends Controller
 {
     
@@ -20,6 +21,7 @@ class AdminController extends Controller
 		$recetas 		= new Receta;
 		$ingredientes 	= new Ingrediente;
 		$panaderias 	= new Panaderia;
+
 
 		//Recoge los datos de los usuarios
 		$usuarios 		= $usuarios->get();
