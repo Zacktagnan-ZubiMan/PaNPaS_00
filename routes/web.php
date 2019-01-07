@@ -14,25 +14,26 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index'); //página principal del administrador
 Route::get('/admin2', function () {
-    return view('admin.indexTEMP');
+    return view('admin.indexTEMP'); 			//página original de la plantilla
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/enviarDatosContacto', 'ContactoController@guardarDatos');
+Route::post('/enviarDatosContacto', 'ContactoController@guardarDatos'); //guarda los datos del formulario de la landing page en la DDBB
 
-Route::post('/admin/editarUsuario', 'UserController@editarUsuario');
-Route::post('/admin/borrarUsuario', 'UserController@borrarUsuario');
+Route::post('/admin/editarUsuario', 'UserController@editarUsuario');	//modifica los datos de un usuario en la DDBB
+Route::post('/admin/borrarUsuario', 'UserController@borrarUsuario');	//borra un usuario de la DDBB
 
+Route::get ('/receta', 'RecetaController@mostrar');
 
 
 
 
 // [API]recoger datos 
 
-Route::get ('/api/usuarios', 'ApiController@getUsuarios');
-Route::get ('/api/perfiles', 'ApiController@getPerfiles');
+Route::get ('/api/usuarios', 'ApiController@getUsuarios'); 	//json de todos los usuarios registrados
+Route::get ('/api/perfiles', 'ApiController@getPerfiles');	//json de todos los perfiles disponibles
