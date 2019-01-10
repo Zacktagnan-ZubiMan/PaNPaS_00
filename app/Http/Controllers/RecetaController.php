@@ -11,14 +11,15 @@ class RecetaController extends Controller
     
 	public function mostrar() {
 
+		$id = 5;
+
 		$receta = new Receta();
 		$comentarios = new Comentario();
 
-		$receta = $receta->find(3);
-		$comentarios = $comentarios->get()->where('receta_id', 3);
+		$receta = $receta->find($id);
+		$comentarios = $comentarios->get()->where('receta_id', $id);
 
-		
-		return view ('user/receta', ['receta'=>$receta, 'comentarios' => $comentarios]);
+		return view ('user/receta', ['receta'=>$receta, 'comentarios' => $comentarios, 'time'=>time()]);
 	}
 
 }

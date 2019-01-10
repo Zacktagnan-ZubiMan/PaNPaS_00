@@ -17,7 +17,7 @@ class comentarios_seeder extends Seeder
 		            'mensaje' => 'Mensaje'.$i,
 		            'user_id' => random_int(1, 5),
 		            'receta_id' => random_int(1, 5),
-		            'fecha' => new DateTime
+		            'time' => time()
 	        ]);
 	    }
     }

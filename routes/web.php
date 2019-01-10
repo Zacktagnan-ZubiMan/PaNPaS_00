@@ -36,8 +36,16 @@ Route::get ('/receta', 'RecetaController@mostrar');
 
 
 //Rutas de la parte pública
-Route::get ('/user/perfil/{id}', 'UserPerfilController@mostrarPerfil'); //mostrar perfil del usuario con información pública
+Route::get ('/user/perfilPublico/{id}', 'UserPerfilController@mostrarPerfilPublico'); //mostrar perfil del usuario con información pública
+Route::get ('/user/index', 'UserPerfilController@index'); //mostrar perfil del usuario con información pública
 
+
+//rutas de usuario privadas
+Route::get('/user/perfilprivado', 'UserPerfilController@mostrarPerfilPrivado');
+Route::post('/user/guardarFotoPerfil', 'UserPerfilController@guardarFotoPerfil');
+
+//prueba
+Route::get('/prueba', 'UserPerfilController@prueba');
 
 
 

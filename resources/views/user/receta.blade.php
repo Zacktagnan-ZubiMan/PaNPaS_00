@@ -4,6 +4,15 @@
 	<title>Receta</title>
 
 	<link rel="stylesheet" type="text/css" href="css/user/receta.css">
+
+
+<style type="text/css">
+	.carousel{
+		width: auto;
+		height: auto;
+	}
+</style>
+
 </head>
 <body>
 
@@ -15,10 +24,57 @@
 
 <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
 
-<div class="col-md-6 black" style="padding: 0; height: 40vh;">
-<img src="http://www.viajejet.com/wp-content/viajes/Quesadillas.jpg" class="img-grande">
-</div>
-<div class="col-md-6 red"style="padding: 0; height: 40vh;"></div>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- INICIO CARROUSEL -->
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	    <a href="htto://www.google.es"><li data-target="#myCarousel"></li></a>
+	  </ol>
+
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="http://www.viajejet.com/wp-content/viajes/Quesadillas.jpg" alt="Los Angeles">
+	    </div>
+
+	    <div class="item">
+	      <img src="http://www.viajejet.com/wp-content/viajes/Quesadillas.jpg" alt="Chicago">
+	    </div>
+
+	    <div class="item">
+	      <img src="http://www.viajejet.com/wp-content/viajes/Quesadillas.jpg" alt="New York">
+	    </div>
+
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+
+	</div> <!-- FIN CARROUSEL -->
+
+
+
 <div class="col-md-12">
 <div class="container receta"> 
   <div class="row row-receta">
@@ -73,24 +129,31 @@
 				<li>
 					<div class="comment-main-level">
 						<!-- Avatar -->
-						<div class="comment-avatar"><img src="https://tutorsnearyou.co.za/tutors/wp-content/uploads/2017/12/user-icon-2098873.png" alt=""></div>
+						<div class="comment-avatar"><img src="{{ $comentario->user->avatar }}" alt=""></div>
 						<!-- Contenedor del Comentario -->
 						<div class="comment-box">
 							<div class="comment-head">
-								<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">{{$comentario->user->nick}}</a></h6>
-								<span>hace 20 minutos</span>
+								<h6 class="comment-name @if ($comentario->user_id == $receta->user_id) by-author @endif"><a href="http://creaticode.com/blog">{{$comentario->user->nick}}</a></h6>
+								<span> hace {{ intval(($time - $comentario->time) / 60) }} minutos</span>
 								<i class="fa fa-reply"></i>
 								<i class="fa fa-heart"></i>
 							</div>
 							<div class="comment-content">
 								{{$comentario->mensaje}}
-							</div>
-							<div class="right"><i class="far fa-star"></i></div>
 						</div>
 					</div>
 				</li>
 			@endforeach
 			
+			<!-- Formulario para insertar comentario en la receta -->
+			<div class="insertar-comentario-container">
+				<form>
+					<textarea>hola</textarea><input type="submit" name="enviarComentario">
+				</form>
+				
+			</div>
+
+
 		</ul>
 	</div>
 <!-- FIN COMENTARIOS -->

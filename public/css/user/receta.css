@@ -330,6 +330,23 @@ hr {
   font-family: 'Frijole';
 }
 
+textarea {
+  width: 30vw;
+  margin: 10px;
+  height: 10vh;
+
+  border-radius: 0px 20px;
+  padding: 10px;
+}
+
+.insertar-comentario-container{
+  margin: auto;
+  text-align: center;
+}
+
+input[type=submit]{
+  margin: 1vw;
+}
 
 
 

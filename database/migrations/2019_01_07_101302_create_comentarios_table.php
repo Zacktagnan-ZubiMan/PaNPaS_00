@@ -19,7 +19,7 @@ class CreateComentariosTable extends Migration
             $table->string('mensaje');
             $table->integer('user_id')->unsigned();
             $table->integer('receta_id')->unsigned();
-            $table->date('fecha');
+            $table->integer('time');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('receta_id')->references('id')->on('recetas');
